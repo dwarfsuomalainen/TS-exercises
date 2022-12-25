@@ -1,27 +1,32 @@
-import { Customers } from "./custormers";
+import { Customer } from "./Customer";
 
 export class Branch {
   private name: string;
-  private customers: Customers;
+  private customer: Customer[];
 
-  constructor(name: string, customers: Customers) {
+  constructor(name: string) {
     this.name = name;
-    this.customers = customers;
+    this.customer = [];
   }
-get getName() {
-    return
-}
-get getCustomers() {
-    return
-}
-getaddCustomer() {
-    return
-}
-addCustomerTransaction() {
-    return
-}
+  getName() {
+    return this.name;
+  }
+  getCustomers() {
+    return this.customer;
+  }
+  addCustomer(customer: Customer): boolean {
+    if (!this.customer.includes(customer)) {
+      this.customer.push(customer);
+      return true;
+    } else {
+      return false;
+    }
+  }
+  addCustomerTransaction() {
+    return;
+  }
 
-findCustomer() {
-    return
-}
+  findCustomer() {
+    return;
+  }
 }

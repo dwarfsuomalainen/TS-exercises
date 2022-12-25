@@ -1,13 +1,18 @@
 import { Branch } from "./branches";
 
-export class Bank {
+export default class Bank {
   private name: string;
-  private branch: Branch;
-  constructor(name: string, branch: Branch) {
+  private branch: Branch[];
+
+  constructor(name: string) {
     this.name = name;
-    this.branch = branch;
+    this.branch = [];
   }
-  addBranch() {}
+  addBranch(branch: Branch): boolean {
+    if (this.checkBranch(branch)) return false;
+    this.branch.push(branch);
+    return true;
+  }
 
   addCustomer() {}
 
@@ -15,7 +20,9 @@ export class Bank {
 
   findBranchByName() {}
 
-  checkBranch() {}
+  checkBranch(branch: Branch): boolean {
+    if (this.branch.includes(branch)) {}
+  }
 
   listCustomers() {}
 }

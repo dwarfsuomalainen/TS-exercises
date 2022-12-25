@@ -1,4 +1,4 @@
-import { Bank } from "./types/bank"
+import { Bank } from "./types/Bank"
 import { Branch } from "./types/Branch"
 import { Customer } from "./types/Customer"
 

@@ -1,20 +1,25 @@
-import { Transactions } from "./transactions"
+import { Transactions } from "./transactions";
 
 export class Customer {
-    name: string 
-    id: number
-    transactions: Transactions
+  name: string;
+  id: number;
+  transactions: Transactions[];
 
-    constructor (name:string, id: number, transactions: Transactions){
-        this.name = name;
-        this.id = id;
-        this.transactions = transactions;
-    }
+  constructor(name: string, id: number, _transactions: Transactions) {
+    this.name = name;
+    this.id = id;
+    this.transactions = [];
+  }
 
-    get getName() {return}
-    get getId() {return}
-    get getTransactions() {return}
-    getBalance(){
-    }
-    addTransaction() {}
+  getName() {
+    return this.name;
+  }
+  getId() {
+    return this.id;
+  }
+  get getTransactions() {
+    return;
+  }
+  getBalance() {}
+  addTransaction() {}
 }
