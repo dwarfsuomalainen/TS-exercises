@@ -16,7 +16,7 @@ export class List<T extends Entity> extends Array<T> {
   /* complete the function sortList() with a parameter "order", which can be 
     either "asc" or "desc". Sort the array by id according to the given order and return the
     reference to the same array*/
-    sortList(order) { }
+    sortList(order: string) { }
 
     /* complete method push(), which overrides original "push" method. New item can be added to the array if 
     id does not exist. Only add all the items to the array if every item satisfies the condition.
