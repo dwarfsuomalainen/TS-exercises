@@ -4,11 +4,13 @@ import { User } from "./types/user";
 
 /* Fix all the possible bugs you might find in the codes below */
 
-const users = new List<User>()
+const users = new List<User>() 
 const products = new List<Product>()
 
-users.fetchAll("https://api.escuelajs.co/api/v1/users")
-products.fetchAll("https://api.escuelajs.co/api/v1/products")
+
+const main = async () => {
+await users.fetchAll("https://api.escuelajs.co/api/v1/users")
+await products.fetchAll("https://api.escuelajs.co/api/v1/products")
 
 console.log(users.sortList("desc")) //Expect to see users array in new order of id decreasing
 
@@ -73,3 +75,6 @@ console.log(testPush1) // expect to see 0
 console.log(testPush2) // expect to see 1
 
 console.log(users) // expect too see 2 more users added in the end of array
+}
+
+main ()

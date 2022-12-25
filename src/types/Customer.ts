@@ -5,9 +5,9 @@ export class Customer {
   id: number;
   transactions: Transactions[];
 
-  constructor(name: string, id: number, _transactions: Transactions) {
+  constructor(name: string) {
     this.name = name;
-    this.id = id;
+    this.id = Math.floor(Math.random() * 100);
     this.transactions = [];
   }
 
@@ -17,7 +17,7 @@ export class Customer {
   getId() {
     return this.id;
   }
-  get getTransactions() {
+  getTransactions() {
     return;
   }
   getBalance() {}

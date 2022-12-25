@@ -14,17 +14,17 @@ export default class Bank {
     return true;
   }
 
-  addCustomer() {}
+  addCustomer(branchName: string, name:string) {}
 
   addCustomerTransaction() {}
 
-  findBranchByName() {}
+  findBranchByName(name:string) {}
 
   checkBranch(branch: Branch): boolean {
-    if (!this.branch.includes(branch)) {
-      return false;
-    } else {
+    if (this.branch.includes(branch)) {
       return true;
+    } else {
+      return false;
     }
   }
 

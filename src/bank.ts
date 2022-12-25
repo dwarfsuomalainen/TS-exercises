@@ -1,6 +1,8 @@
-import { Bank } from "./types/Bank"
+
+import Bank from "./types/Bank"
 import { Branch } from "./types/Branch"
 import { Customer } from "./types/Customer"
+
 
 const arizonaBank = new Bank("Arizona")
 const westBranch = new Branch("West Branch")
