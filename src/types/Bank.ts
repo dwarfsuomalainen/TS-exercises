@@ -21,7 +21,11 @@ export default class Bank {
   findBranchByName() {}
 
   checkBranch(branch: Branch): boolean {
-    if (this.branch.includes(branch)) {}
+    if (!this.branch.includes(branch)) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   listCustomers() {}
