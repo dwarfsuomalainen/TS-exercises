@@ -1,13 +1,13 @@
-import { Transactions } from "./transactions";
+import Transactions from "./transactions";
 
-export class Customer {
+export default class Customer {
   name: string;
-  id: number;
+  id: string;
   transactions: Transactions[];
 
   constructor(name: string) {
     this.name = name;
-    this.id = Math.floor(Math.random() * 100);
+    this.id = Math.floor(Math.random() * 100).toString();
     this.transactions = [];
   }
 
@@ -18,8 +18,24 @@ export class Customer {
     return this.id;
   }
   getTransactions() {
-    return;
+   return this.transactions;
   }
-  getBalance() {}
-  addTransaction() {}
+  getBalance() {
+    return this.getTransactions().reduce((x, y) => x + y.amount, 0)
+  }
+  addTransactions(amount: number): boolean {
+    if (this.getBalance() + amount < 0) {
+        return false
+
+    } else {
+
+        let newTransaction: Transactions = {
+            amount: amount,
+            date: new Date(),
+        }
+        this.transactions.push(newTransaction)
+        
+        return true;
+    }
+  }
 }

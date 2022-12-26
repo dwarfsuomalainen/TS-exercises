@@ -1,6 +1,6 @@
-import { Customer } from "./Customer";
+import Customer from "./Customer";
 
-export class Branch {
+export default class Branch {
   private name: string;
   private customer: Customer[];
 
@@ -22,11 +22,22 @@ export class Branch {
       return false;
     }
   }
-  addCustomerTransaction() {
-    return;
+  addCustomerTransaction(id: string, amount: number): boolean {
+    const customer = this.findCustomer(id);
+    if (customer) {
+      customer.addTransactions(amount);
+      return true;
+    } else {
+      return false;
+    }
   }
 
-  findCustomer() {
-    return;
+  findCustomer(id: string): Customer | null {
+    const customer_search = this.customer.find((cust) => cust.getId() === id);
+    if (customer_search === undefined) {
+      return null;
+    } else {
+      return customer_search;
+    }
   }
 }
