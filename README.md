@@ -1,5 +1,5 @@
 # Simple banking application -- assignment
-![Generic badge] (https://img.shields.io/badge/types-Flow%20%7C%20TypeScript-blue)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 ## Description
 
@@ -66,7 +66,6 @@ Implement the following classes, interface, and codes (you can decide which file
     - It has 2 properties, a number `amount`, and a Date called `date`. `date` refers to the time that transaction has been created.
 
 Run the following codes in `bank.ts`and share your results and findings in the Slack channel
-
 ```
 const arizonaBank = new Bank("Arizona")
 const westBranch = new Branch("West Branch")
@@ -96,7 +95,6 @@ console.log(customer1.getBalance())
 console.log(arizonaBank.listCustomers(westBranch, true))
 console.log(arizonaBank.listCustomers(sunBranch,true))
 ```
-
 ## Fetch E-commerce data
 
 Explore the codes in `index.ts` and folder `types`. Complete the codes or fix bugs
