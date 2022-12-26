@@ -1,22 +1,22 @@
 import Customer from "./Customer";
 
 export default class Branch {
-  private name: string;
-  private customer: Customer[];
+  private _name: string;
+  private _customer: Customer[];
 
   constructor(name: string) {
-    this.name = name;
-    this.customer = [];
+    this._name = name;
+    this._customer = [];
   }
-  getName() {
-    return this.name;
+  public get getName() {
+    return this._name;
   }
-  getCustomers() {
-    return this.customer;
+  public get getCustomers() {
+    return this._customer;
   }
   addCustomer(customer: Customer): boolean {
-    if (!this.customer.includes(customer)) {
-      this.customer.push(customer);
+    if (!this._customer.includes(customer)) {
+      this._customer.push(customer);
       return true;
     } else {
       return false;
@@ -33,7 +33,7 @@ export default class Branch {
   }
 
   findCustomer(id: string): Customer | null {
-    const customer_search = this.customer.find((cust) => cust.getId() === id);
+    const customer_search = this._customer.find((cust) => cust.getId === id);
     if (customer_search === undefined) {
       return null;
     } else {
