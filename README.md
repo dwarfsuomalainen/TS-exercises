@@ -1,4 +1,7 @@
-# Create a simple banking application -- !
+# Simple banking application -- assignment
+![Generic badge] (https://img.shields.io/badge/types-Flow%20%7C%20TypeScript-blue)
+
+## Description
 
 Implement the following classes, interface, and codes (you can decide which file to put each type, but do not write all the types in `index.ts` or `bank.ts`). All the properties must be kept private, while you can make the methods as public
 
@@ -98,3 +101,24 @@ console.log(arizonaBank.listCustomers(sunBranch,true))
 
 Explore the codes in `index.ts` and folder `types`. Complete the codes or fix bugs
 if needed to producce the expected result according to the codes in `index.ts`.
+
+
+## Project structure
+```
+.
+├── bank.ts
+├── index.ts
+└── types
+    ├── Bank.ts
+    ├── Branch.ts
+    ├── Customer.ts
+    ├── Transactions.ts
+    ├── common.ts
+    ├── ecommerce.ts
+    ├── product.ts
+    └── user.ts
+
+```
+## Instructions
+Clone the repository `git clone https://github.com/dwarfsuomalainen/TS-exercises.git`
+
